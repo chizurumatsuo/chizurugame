@@ -1,0 +1,12 @@
+{
+"companyName": "Dan Jorquera",
+"productName": "iPadWebAudioExample",
+"dataUrl": "soundtest.data.unityweb",
+"wasmCodeUrl": "soundtest.wasm.code.unityweb",
+"wasmFrameworkUrl": "soundtest.wasm.framework.unityweb",
+"TOTAL_MEMORY": 134217728,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
