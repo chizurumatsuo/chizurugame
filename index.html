@@ -8,11 +8,26 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
+
+    <script>
+      function start() {
+        document.getElementById("gameContainer").style.visibility= "visible";
+        document.getElementById("sound").play();
+      }
+    </script>
+    
+    <audio preload="auto"
+      <source id="sound" src="StreamingAssets/sfx/500-milliseconds-of-silence.mp3" type="audio/mpeg" codecs="mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    
+
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/soundtest.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
+  <body><button onclick="start()">Start</button>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 400px; height: 300px"></div>
       <div class="footer">
