@@ -28,6 +28,20 @@
     </script>
   </head>
   <body><button onclick="start()">Start</button>
+        <script src="../shared/wa.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+      wa.loadFile('../shared/sample.mp3', function(buffer) {
+        wa.play(buffer);
+
+        // ユーザーイベント
+        var event = 'click';
+        document.addEventListener(event, function() {
+          wa.playSilent();
+        });
+      });
+    }
+    </script>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 400px; height: 300px"></div>
       <div class="footer">
