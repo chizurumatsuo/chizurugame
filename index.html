@@ -1,55 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | iPadWebAudioExample</title>
+    <title>Unity WebGL Player | New Unity Project</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-
     <script>
-      function start() {
-        document.getElementById("gameContainer").style.visibility= "visible";
-        document.getElementById("sound").play();
-      }
-    </script>
-    
-    <audio preload="auto"
-      <source id="sound" src="StreamingAssets/sfx/500-milliseconds-of-silence.mp3" type="audio/mpeg" codecs="mp3">
-      Your browser does not support the audio element.
-    </audio>
-    
-    
-
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/soundtest2.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webgl.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body><button onclick="start()">Start</button>
-        <script src="shared/wa.js"></script>
-    <script type="text/javascript">
-    window.onload = function() {
-      wa.loadFile('shared/sample.mp3', function(buffer) {
-        wa.play(buffer);
-
-        // ユーザーイベント
-        var event = 'click';
-        document.addEventListener(event, function() {
-          wa.playSilent();
-        });
-      });
-    }
-    </script>
+  <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 400px; height: 300px"></div>
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">iPadWebAudioExample</div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">New Unity Project</div>
       </div>
     </div>
   </body>
